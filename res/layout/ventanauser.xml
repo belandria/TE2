@@ -1,40 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+
+    <GridLayout
+        android:id="@+id/lytBtnAbrir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lytLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:columnCount="1"
+        android:visibility="visible" >
 
         <Button
             android:id="@+id/bAbrirCerrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8sp"
-            android:layout_centerHorizontal="true"
             android:gravity="center"
             android:onClick="abrircerrar"
             android:text="Abrir" />
-        
+
         <TextView
             android:id="@+id/txtNombreMod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/bAbrirCerrar"
             android:layout_marginTop="8sp"
-            android:visibility="visible"
-            android:textColor="#000000" />
+            android:gravity="center"
+            android:textColor="#000000"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/txtMsjRecibido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:layout_below="@+id/txtNombreMod"
             android:layout_marginTop="8sp"
-            android:visibility="visible"
-            android:textColor="#000000" />
+            android:gravity="center"
+            android:textColor="#000000"
+            android:visibility="visible" />
 
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/lytLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="152dp"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="0" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:layout_row="0"
+            android:text="Usuario:" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|top"
+            android:layout_row="1"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:layout_row="1"
+            android:text="Contraseña:" />
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="2"
+            android:text="Ingresar" />
+    </GridLayout>
 
 </RelativeLayout>

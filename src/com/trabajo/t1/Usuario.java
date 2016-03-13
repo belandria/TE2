@@ -33,7 +33,7 @@ public class Usuario extends Activity {
 		setContentView(R.layout.ventanauser);
 		
 		botonAbrirCerrar = (Button) findViewById(R.id.bAbrirCerrar);
-				respuesta = (TextView) findViewById(R.id.txtMsjRecibido);
+		respuesta = (TextView) findViewById(R.id.txtMsjRecibido);
 		mTitle = (TextView) findViewById(R.id.txtNombreMod);
 		BA = BluetoothAdapter.getDefaultAdapter();
 		mBluetoothChatService = new BluetoothChatService(this, mHandler);

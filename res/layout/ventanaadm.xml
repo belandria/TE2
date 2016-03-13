@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/cajaTextoUser1"
+    <GridLayout
+        android:id="@+id/lytPasswordAdm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOLAAAAAAA" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:columnCount="2" >
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="138dp"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:inputType="textPassword" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:layout_row="0"
+            android:text="Contraseña:" />
+    </GridLayout>
+
+</RelativeLayout>
